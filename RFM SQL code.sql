@@ -78,8 +78,7 @@ SELECT CustomerID,
 	Monetary_score,
         total_score,
         rfm_cell,
-	CASE
-
+CASE
        WHEN  rfm_cell  in ( 311, 312, 313, 314 ) THEN 'New customer'
        WHEN  rfm_cell  in ( 111, 112,113,114) THEN 'Random customer'
        WHEN  rfm_cell in ( 121, 122, 123, 124, 131,132,133,134,141,142,143,144 ) THEN 'Lost customer'
@@ -89,7 +88,7 @@ SELECT CustomerID,
        WHEN  rfm_cell  in  (241, 242, 243, 244, 331,332, 342 ,421, 422, 431,441,442) THEN ' Loyal but low value'
        WHEN  rfm_cell in ( 333, 334, 343 ,344,423,424, 432,433)  THEN 'Loyal & high value'
        WHEN  rfm_cell in ( 434, 443, 444) THEN 'Champion'
-	END AS clusters
+END AS clusters
   
 		
  FROM #rfm 
