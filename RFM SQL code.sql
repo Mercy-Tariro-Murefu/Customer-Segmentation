@@ -1,4 +1,4 @@
----INSPECTING DATA
+---INSPECTING 
 
 SELECT*
 FROM [dbo].[sales_data]
