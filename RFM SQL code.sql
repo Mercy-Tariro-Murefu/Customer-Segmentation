@@ -35,6 +35,7 @@ WHERE CustomerID IS NOT NULL
 GROUP BY CustomerID ),
 
 ---assigning scores to recency,frequency and monetary values using the NTILE function
+	
 rfm_score AS
  (SELECT CustomerID,
        Recency,
